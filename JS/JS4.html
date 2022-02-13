@@ -73,15 +73,17 @@
 
     // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age ,
     // та виводить їх в документ. Для кожного об'єкту окремий блок.
-    function arrMens() {
-        let users = [
-            { id: 11, name: 'Oleg', age: 23},
-            { id: 47, name: 'Kolja', age: 28},
-            { id: 85, name: 'Alex', age: 34},
-            { id: 97, name: 'Olja', age: 28}
-        ]
+    let users = [
+        { id: 11, name: 'Oleg', age: 23},
+        { id: 47, name: 'Kolja', age: 28},
+        { id: 85, name: 'Alex', age: 34},
+        { id: 97, name: 'Olja', age: 28}
+    ]
+    function arrMens(array) {
+        for (const usersElement of array)
+            document.write(`<div> ${usersElement.id}, ${usersElement.name}, ${usersElement.age} </div>`)
     }
-
+    arrMens(users)
 </script>
 
 </body>
